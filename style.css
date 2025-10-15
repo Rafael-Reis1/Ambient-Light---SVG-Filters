@@ -5,17 +5,37 @@
     overflow-x: clip;
 }
 
+html {
+    scroll-snap-type: y mandatory;
+}
+
+body {
+    background-color: #06071a;
+}
+
 .container {
-    padding: 3.125rem;
     width: 100dvw;
     display: flex;
     flex-direction: column;
-    gap: 6.25rem;
     justify-content: center;
     align-items: center;
-    background-color: black;
+}
+
+.container > .ambilight {
+    scroll-snap-align: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10rem 0;
 }
 
 .ambilight {
     filter: url(#ambilight);
+    max-width: 100%;
+    max-height: 100%;
+}
+
+iframe.ambilight {
+    width: 57.9vw;
 }
